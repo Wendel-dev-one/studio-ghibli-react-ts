@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* globals.css */
+
+@theme {
+  /* ===================================
+     PALETA DE CORES (Ghibli Dark Theme)
+     =================================== */
+  
+  /* Superfícies e Fundos */
+  --color-bg-main: #0d1117;          /* Fundo principal da aplicação */
+  --color-bg-card: #161b22;          /* Fundo dos cards na página inicial */
+  --color-bg-card-hover: #21262d;    /* Fundo do card no estado hover */
+  --color-bg-modal: #1c2128;         /* Fundo do modal/página de detalhes */
+  
+  /* Acentos e Destaques */
+  --color-primary: #e6b450;          /* Dourado/Amarelo acolhedor para títulos e destaques */
+  --color-primary-hover: #f5c86b;    /* Dourado mais claro para o hover */
+  --color-accent: #3fb950;           /* Verde folha para badges/status */
+  --color-badge-rotten: #ff5c5c;     /* Vermelho/Laranja para a nota do Rotten Tomatoes */
+  
+  /* Textos */
+  --color-text-main: #f0f6fc;        /* Texto principal de alta legibilidade */
+  --color-text-muted: #8b949e;       /* Texto secundário (diretor, produtor, ano) */
+  --color-text-subtle: #6e7681;      /* Rótulos pequenos e detalhes sutis */
+
+  /* Bordas e Divisores */
+  --color-border: #30363d;           /* Bordas discretas dos cards */
+  --color-border-bright: #484f58;    /* Borda em destaque ou no hover */
+
+  /* ===================================
+     TIPOGRAFIA
+     =================================== */
+  --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Tamanhos de Fonte */
+  --font-size-xs: 0.75rem;    /* 12px - Badges pequenas */
+  --font-size-sm: 0.875rem;   /* 14px - Metadados (Ano, Diretor) */
+  --font-size-base: 1rem;     /* 16px - Texto do corpo / Descrição */
+  --font-size-lg: 1.125rem;   /* 18px - Títulos dos cards */
+  --font-size-xl: 1.5rem;     /* 24px - Subtítulos */
+  --font-size-2xl: 2.25rem;   /* 36px - Título principal da página */
+  --font-size-3xl: 3rem;      /* 48px - Título no hero de detalhes */
+
+  /* Pesos de Fonte */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ===================================
+     EFEITOS, ELEVAÇÃO E BORDAS
+     =================================== */
+  /* Raio de Curvatura (Border Radius) */
+  --radius-sm: 6px;           /* Badges e botões pequenos */
+  --radius-md: 12px;          /* Cards e imagens */
+  --radius-lg: 20px;          /* Modais e containers grandes */
+
+  /* Sombras (Shadows) */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 12px 30px rgba(230, 180, 80, 0.15); /* Brilho dourado suave */
+  --shadow-modal: 0 20px 50px rgba(0, 0, 0, 0.8);
+
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===================================
+   ESTILOS BASE (APLICAÇÃO)
+   =================================== */
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  gap: 16px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #2b3a4a;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #e6b450; /* Dourado principal do tema */
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
