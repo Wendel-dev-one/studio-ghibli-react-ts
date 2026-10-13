@@ -161,7 +161,7 @@ npm run lint
 
 ---
 
-## 👤 Autor
+## 👤 Desenvolvedor
 
 Desenvolvido por **Wendel Silva**  
 [GitHub](https://github.com/Wendel-dev-one)
